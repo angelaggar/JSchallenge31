@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>DEV Community</title>
+</head>
+<body class="bg-body-secondary">
+    <!-- //////////////////////////////NAVBAR/////////////////////// -->
+    <section class="navbar fixed-top bg-light p-0 d-flex flex-row justify-content-center">
+        <div class="d-flex flex-row col col-10 justify-content-between">
+            <div class="d-flex flex-row justify-content-between">
+                <a href="./index.html" class="d-flex align-items-center">
+                    <img style="height: 50px;" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" 
+                    alt="Dev.to">
+                </a>
+                <form class="d-flex flex-row" style="width: 60vh; height: 3.5rem">
+                    <input type="hiden" class="form-control d-none" id="" >
+                    <input type="text" class="form-control mx-1 my-2" id="searchInput" placeholder="Search">
+                    <button id="searchButton" class="btn btnPurple d-flex flex-row mx-0 my-2 text-align-center" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>                  
+                    </button>
+                </form>
+            </div>
+            <div id="loginBoxNav">
+                <div id="loginButton"class="loginButton btn btnOutPurple m-2">
+                    <a href="./pages/loginForm.html">Login</a>
+                </div>
+                <!-- <div id="createAccountButton" class="createAccountButton btn btnPurple m-2 mr-0">Create Account</div> -->
+            </div>
+            <div id="loggedBoxNav">
+                <div id="createPostButton" class="btn btnPurple m-2 mr-0">
+                    <a  href="./pages/newPostForm.html" style="text-decoration: none; color: white;">Create a post</a>
+                </div>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                </svg> -->
+                <!-- <img id="avatar" class="card-img-top rounded-circle" style="width: 35px;" alt="..." class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item col-12"  type="button" href="./pages/logout.html">Sign Out</a></li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+    <!-- /////////////////PAGE CONTAINER -->
+    <div class="d-flex container-fluid bg-body-secondary col col-10" style="margin-top: 80px;">
+        <!-- ////////////ASIDE LEFT//////////////// -->
+       <div class="aside-left col-2 d-flex flex-column me-1">
+            <div id="loginBox" class="d-flex flex-column border rounded bg-light border-secondary-subtle">
+                <h5 class="p-3 fw-bold">DEV Community is a community of 1,184,207 amazing developers</h5>
+                <p class="p-3">We're a place where coders share, stay up-to-date and grow their careers.</p>
+                <!-- <button class="createAccountButton d-flex justify-content-center btn btnPurple mx-2 mb-1" href="#">Create Account</button> -->
+                <button class="loginButton d-flex justify-content-center btn btnOutPurple mx-2 mb-2">
+                    <a href="./pages/loginForm.html">Login</a>
+                </button>
+            </div>
+            <div class="d-flex flex-column">
+                <div class="labelbox2">
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/" class="icon">🏠 Home </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="#" class="icon">📚 Reading List </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/pod" class="icon">🎙️ Podcast </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/videos" class="icon">📽️ Videos </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/tags" class="icon">🏷️ Tags </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/tags" class="icon">💡 FAQ </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://shop.forem.com/" class="icon">🛍️ Forem Shop </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/dev-advertising-options" class="icon">❤️ Advertise on DEV </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/about" class="icon">🆒 About </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/contact" class="icon">📯 Contact </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/guides" class="icon">📖 Guides </a>
+                    </li>
+                    <li class="listbox ps-3">
+                        <a target="_blank" href="https://dev.to/software-comparisons" class="icon">🤔 Software Comparisons </a>
+                    </li>
+                    <h2 class="labeltitle p-2">Other </h2>
+                        <li class="listbox ps-3">
+                            <a href="#" class="icon">👍 Code of Conduct </a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a href="#" class="icon">🤓 Privacy Policy </a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a href="#" class="icon">👀 Terms of use </a>
+                        </li>
+                    <nav class="socialm">
+                        <a target="_blank" href="https://twitter.com/thepracticaldev">
+                            <img class="social_icon" src="img/Logotwit.png" alt="N/A">
+                        </a>
+                        <a target="_blank" href="https://facebook.com/thepracticaldev">
+                            <img class="social_icon" src="img/Logoface.png" alt="N/A">
+                        </a>
+                        <a target="_blank" href="https://github.com/forem">
+                            <img class="social_icon" src="img/Logogithub.png" alt="N/A">
+                        </a>
+                        <a target="_blank" href="https://instagram.com/thepracticaldev">
+                            <img class="social_icon" src="img/Logoinsta.png" alt="N/A">
+                        </a>
+                        <a target="_blank" href="https://twitch.com/thepracticaldev">
+                            <img class="social_icon" src="img/Logotwitch.png" alt="N/A">
+                        </a>
+                        <a target="_blank" href="https://fosstodon.org/@thepracticaldev">
+                            <img class="social_icon" src="img/Logofoss.png" alt="N/A">
+                        </a>
+                    </nav>
+                    <h2 class="labeltitle p-2">Popular Tags </h2>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="#">#webdev</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/javascript">#javascript</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/beginners">#beginners</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/programming">#programming</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/tutorial">#tutorial</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/react">#react</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/python">#python</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="https://dev.to/t/discuss">#discuss</a>
+                        </li>
+                        <li class="listbox ps-3">
+                            <a class="tag" target="_blank" href="#">#opensource</a>
+                        </li>
+                </div>
+            </div>
+        </div>
+    
+
+            <!-- ///////////////// POST COLUMN////////////////// -->
+    <div id="postsColumn" class="col-7 d-flex flex-column m-0">
+        <nav class="d-flex flex-row justify-content-start flex-wrap">
+            <button id="relevant" class="btn btn-light col col-2 p-1 m-1 fs-5 text-decoration-none text-dark">Relevant</button>
+            <button id="latest" class="btn btn-light col col-2 p-1 m-1 fs-5 text-decoration-none text-dark">Latest</button>
+            <button id="top" class="btn btn-light col col-2 p-1 m-1 fs-5 text-decoration-none text-dark">Top</button>
+        </nav>
+        <div class="d-flex flex-column col col-12" id="cardColumn">
+            <!-- //////////// MAIN CARD//////////////////// -->
+            
+        </div>
+    </div>
+
+
+            <!-- ////////////////////ASIDE RIGHT///////////////////// -->
+        <div id="aside-right" class="d-flex flex-column col-3 m-1">
+            <!-- AQUI ESTA LA CAJA PARA CADA TAG, PRIMERA-->
+            <div id="boxForTag" class="border border-secondary-subtle rounded bg-light mb-2">
+                <h4 class="border border-bottom-1 border-secondary-subtle px-3 py-2 mb-0 fw-bold">
+                    <a id="tagTitle" href="" class="text-decoration-none text-dark">#discuss</a>
+                </h4>
+                <!-- AQUI SALEN LOS ARTICULOS RELACIONADOS AL TAG -->
+                <div id="boxForPosts">
+                    <div id="taggedPostContainer" class="border border-bottom-1 border-secondary-subtle px-3 py-1 ">
+                        <a class="text-decoration-none text-dark" href="./pages/post.html" >
+                            Is There a Developer Shortage?
+                            <p class="fs-6 fw-light m-0"> 5 comments</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border border-bottom-1 border-secondary-subtle px-3 py-1 ">
+                    <a class="text-decoration-none text-dark" href="" >
+                        Is There a Possibility to survive to Javascript?
+                        <p class="fs-6 fw-light m-0"> 6 comments</p>
+                    </a>
+                </div>
+                <div class="border border-bottom-1 border-secondary-subtle px-3 py-1 ">
+                    <a class="text-decoration-none text-dark" href="" >
+                        Are the Koders fair colored chickens?
+                        <p class="fs-6 fw-light m-0"> 6 comments</p>
+                    </a>
+                </div>
+                <div class="border border-bottom-1 border-secondary-subtle px-3 py-1 ">
+                    <a class="text-decoration-none text-dark" href="" >
+                        Is There a Developer Shortage?
+                        <p class="fs-6 fw-light m-0"> 6 comments</p>
+                    </a>
+                </div>
+                <div class="border border-bottom-1 border-secondary-subtle px-3 py-1 ">
+                    <a class="text-decoration-none text-dark" href="" >
+                        Is There a Developer Shortage?
+                        <p class="fs-6 fw-light m-0"> 6 comments</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+            <!-- ////////////////////////FOOTER////////////////////////////// -->
+    <div>
+
+    </div>
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+    <script src="./js/main.js" type="module"></script>
+
+    
+ </body>
+</html>
